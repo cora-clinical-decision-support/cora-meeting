@@ -88,33 +88,42 @@
                     <div class="row">
                         <div class="seven columns label">Major Comorbidities</div>
                         <div class="five columns">
-                            <a href="#expandcomorbidities">Diabetes</a>
+                            <a href="#expandcomorbidities">Diabetes Type II</a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="eight columns">
+                        <div class="three columns label"></div>
+                        <div class="nine columns">
                             <a href="#expandcomorbidities">History of Prosetic Cancer</a>
-                            <div id="expandcomorbidities" class="modalDialog square">
-                                <div>
-                                    <div class="plainExpandTexts">
-                                        <a href="#close" title="Close" class="close">x</a>
-                                        <a class="session-label">Major Comorbidities</a>
-                                        <ul style="padding-left: 10px">
-                                            <li><b>Diabetes mellitus type 2:</b> NIDDM, Dx 2001, mild peripheral neuropathy and CKD stage III;</li>
-                                            <li><b>History of Prosetic Cancer:</b> CABG 03/2013 - LIMA to LAD, SVG to OM and RCA;</li>
-                                            <li><b>Ventricular Tachycardia:</b> ICD shocks for monomorphic VT 11/2016, started on Amiodarone;</li>
-                                            <li><b>CKD stage III:</b> Dx 2016, likely related to DM and cardio renal syndrome; eGFR 50</li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="four columns">
-                            <a href="#expandcomorbidities">LVD</a>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="three columns label"></div>
+                        <div class="three columns">
+                            <a href="#expandcomorbidities">VT</a>
+                        </div>
+                        <div class="six columns">
+                            <a href="#expandcomorbidities">CKD Stage III</a>
+                        </div>
+                        <div id="expandcomorbidities" class="modalDialog square">
+                            <div>
+                                <div class="plainExpandTexts">
+                                    <a href="#close" title="Close" class="close">x</a>
+                                    <a class="session-label">Major Comorbidities</a>
+                                    <ul style="padding-left: 10px">
+                                        <li><b>Diabetes mellitus type 2:</b> NIDDM, Dx 2001, mild peripheral neuropathy and CKD stage III;</li>
+                                        <li><b>History of Prosetic Cancer:</b> CABG 03/2013 - LIMA to LAD, SVG to OM and RCA;</li>
+                                        <li><b>Ventricular Tachycardia:</b> ICD shocks for monomorphic VT 11/2016, started on Amiodarone;</li>
+                                        <li><b>CKD stage III:</b> Dx 2016, likely related to DM and cardio renal syndrome; eGFR 50</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                     <div class="row">
                         <div class="six columns label">Insurance</div>
                         <div class="six columns"><a>Medicare</a></div>
@@ -181,7 +190,7 @@
                                 <a style="color:#1f77b4">&#9679;</a>
                                 <h7>4</h7>
                             </td>
-                            <td>Add Inotrope</td>
+                            <td>NYHA ClassIII</td>
                             <td>11/2016</td>
                         </tr>
                         <tr>
@@ -189,7 +198,8 @@
                                 <a style="color:#1f77b4">&#9679;</a>
                                 <h7>5</h7>
                             </td>
-                            <td>Referred for MCS</td>
+                            <td>Add Inotrope;
+                                <br>Referred for MCS</td>
                             <td>02/2017</td>
                         </tr>
 
@@ -201,7 +211,9 @@
                     <tbody>
                         <tr>
                             <td></td>
-                            <td>One previous cardiac surgery
+                            <td>Previous Cardiac Sx</td>
+                            <td>1
+
                                 <a href="#expandhistory">
                                     <h7>details</h7>
                                     <div id="expandhistory" class="modalDialog square">
@@ -237,11 +249,11 @@
                             </tr>
                             <tr>
                                 <td>CREAT</td>
-                                <td>1.16</td>
+                                <td>1.7</td>
                             </tr>
                             <tr>
                                 <td>HGBA1C</td>
-                                <td>5.2</td>
+                                <td>7.2</td>
                             </tr>
                             <tr>
                                 <td>SGPT</td>
@@ -258,6 +270,10 @@
                             <tr>
                                 <td>PALB</td>
                                 <td>16.0</td>
+                            </tr>
+                            <tr>
+                                <td>NA</td>
+                                <td>121</td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -277,22 +293,7 @@
                         </tbody>
                     </table>
                 </div>
-                <a class="session-label">MORE</a>
-                <nav class="navbar" style="padding-left:10px">
-                    <ul class="navbar-list">
-                        <li class="navbar-item">
-                            <a>
-                                <h6>ABI</h6>
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a><h6>CT Scan</h6></a>
-                        </li>
-                        <li class="navbar-item">
-                            <a><h6>Others</h6></a>
-                        </li>
-                    </ul>
-                </nav>
+
 
 
 
@@ -356,7 +357,46 @@
                     <a class="session-label">Cardiac Med</a>
 
                     <table style="margin-top: 10px; width: 100%">
+                        <tbody>
+                            <tr>
+                                <td>ASA</td>
+                                <td>82 mg</td>
+                            </tr>
+                            <tr>
+                                <td>Planix</td>
+                                <td>75 mg</td>
+                            </tr>
+                            <tr>
+                                <td>Lisinopril</td>
+                                <td>5 mg/day</td>
+                            </tr>
+                            <tr>
+                                <td>Amiodarone</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Aldactone</td>
+                                <td>25 /day</td>
+                            </tr>
+
+                        </tbody>
                     </table>
+                    <a class="session-label">MORE</a>
+                    <nav class="navbar" style="padding-left:10px">
+                        <ul class="navbar-list">
+                            <li class="navbar-item">
+                                <a>
+                                    <h6>ABI</h6>
+                                </a>
+                            </li>
+                            <li class="navbar-item">
+                                <a><h6>CT Scan</h6></a>
+                            </li>
+                            <li class="navbar-item">
+                                <a><h6>Others</h6></a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
             </div>
@@ -458,7 +498,11 @@
                     <tbody>
                         <tr>
                             <td>QRS</td>
-                            <td>168</td>
+                            <td>128</td>
+                        </tr>
+                        <tr>
+                            <td>Rhythm</td>
+                            <td>A fib</td>
                         </tr>
                     </tbody>
                 </table>
