@@ -5,7 +5,7 @@
 ------ Creater/Contact: Qian Yang (qyang1 at cs dot cmu dot edu) ------------->
 
 <! -- CSS/JS References -- >
-<! -- www.getskeleton.com; github.com/jiahuang/d3-timeline; github.com/Toddish/Popup ------>
+<! -- www.getskeleton.com; github.com/jiahuang/d3-timeline; jsfiddle.net/kumarmuthaliar/GG9Sa ------>
 
 
 <head>
@@ -34,14 +34,19 @@
     <script src="src/jquery-3.1.1.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="src/d3-timeline.js"></script>
+
+    <!-- timeline -->
     <script src="src/history.js"></script>
+
+    <!-- popup details -->
+    <script src="src/popup.js"></script>
 </head>
 
 <body>
     <div class="container" style="margin-top: 5%">
         <div class="row">
             <div class="one-third column" id="info">
-                <h4 class="docs-header">Adams, John</h4>
+                <h4 class="docs-header">Adams, John <h7>(Hypothetical Patient)</h7></h4>
                 <h6>Date of Presentation: 03/01/2017</h6>
 
                 <nav class="navbar" style="margin-bottom: 5%">
@@ -83,15 +88,31 @@
                     <div class="row">
                         <div class="seven columns label">Major Comorbidities</div>
                         <div class="five columns">
-                            <a>diabetes</a>
+                            <a href="#expandcomorbidities">Diabetes</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="eight columns">
-                            <a>History of Prosetic Cancer</a>
+                            <a href="#expandcomorbidities">History of Prosetic Cancer</a>
+                            <div id="expandcomorbidities" class="modalDialog square">
+                                <div>
+                                    <div class="plainExpandTexts">
+                                        <a href="#close" title="Close" class="close">x</a>
+                                        <a class="session-label">Major Comorbidities</a>
+                                        <ul style="padding-left: 10px">
+                                            <li><b>Diabetes mellitus type 2:</b> NIDDM, Dx 2001, mild peripheral neuropathy and CKD stage III;</li>
+                                            <li><b>History of Prosetic Cancer:</b> CABG 03/2013 - LIMA to LAD, SVG to OM and RCA;</li>
+                                            <li><b>Ventricular Tachycardia:</b> ICD shocks for monomorphic VT 11/2016, started on Amiodarone;</li>
+                                            <li><b>CKD stage III:</b> Dx 2016, likely related to DM and cardio renal syndrome; eGFR 50</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="four columns">
-                            <a>LVD</a>
+                            <a href="#expandcomorbidities">LVD</a>
                         </div>
                     </div>
                     <div class="row">
@@ -174,13 +195,22 @@
 
                     </tbody>
                 </table>
+
+
                 <table class="u-full-width">
                     <tbody>
                         <tr>
                             <td></td>
                             <td>One previous cardiac surgery
-                                <a href="#" class="popup">
-                                    <h7>more...</h7>
+                                <a href="#expandhistory">
+                                    <h7>details</h7>
+                                    <div id="expandhistory" class="modalDialog square">
+                                        <div>
+                                            <a href="#close" title="Close" class="close">x</a>
+                                            <a class="session-label">Cardiac Surgery History</a>
+                                            <p>CABG 03/2013 - LIMA to LAD, SVG to OM and RCA</p>
+                                        </div>
+                                    </div>
                                 </a>
                             </td>
                         </tr>
@@ -232,8 +262,15 @@
                             <tr>
                                 <td></td>
                                 <td>
-                                    <a>
-                                        <h7>more...</h7>
+                                    <a href="#expandlab">
+                                        <h7>more</h7>
+                                        <div id="expandlab" class="modalDialog square">
+                                            <div>
+                                                <a href="#close" title="Close" class="close">x</a>
+                                                <a class="session-label">Labs</a>
+                                                <p class="plainExpandTexts">CABG 03/2013 - LIMA to LAD, SVG to OM and RCA</p>
+                                            </div>
+                                        </div>
                                     </a>
                                 </td>
                             </tr>
@@ -293,8 +330,24 @@
                             <tr>
                                 <td></td>
                                 <td>
-                                    <a>
+                                    <a href="#expandecho">
                                         <h7>more...</h7>
+                                        <div id="expandecho" class="modalDialog square">
+                                            <div>
+                                                <a href="#close" title="Close" class="close">x</a>
+                                                <a class="session-label">ECHO</a>
+                                                <ul style="padding-left: 10px">
+                                                    <li><b>Left Ventricle: </b>Left ventricle is severely dilated. The left ventricular systolic function is severely decreased. The left ventricular ejection fraction is 15 - 19% (normal LVEF is 55%-74%). There is Left ventricular global hypokinesis present. Left ventricular diastolic dysfunction is present, consistent with restrictive physiology (Grade III). Left atrial pressure is elevated.</li>
+                                                    <li><b>Left Atrium:</b> The left atrium is moderately dilated. Interatrial Septum - The interatrial septum appears normal.</li>
+                                                    <li><b>Right Ventricle: </b>The right ventricle is severely dilated. The right ventricle has a mildly to moderately reduced systolic function. There is a pacemaker or ICD lead present in the right ventricle.</li>
+                                                    <li><b>Right Atrium:</b> The right atrium is dilated. Aorta - Normal aortic root, size and contour. Aortic Valve - The aortic valve has normal trileaflet morphology, no stenosis and no regurgitation. Mitral Valve - The mitral valve leaflets have focal calcification. There is moderate (2-3+) mitral regurgitation. The jet is eccentric and posteriorly-directed.</li>
+                                                    <li><b>Tricuspid Valve:</b> The tricuspid valve has normal leaflet thickness. There is no significant stenosis of the tricuspid valve present. There is mild to moderate (1-2+) tricuspid valve regurgitation present. Pulmonic Valve - There is normal pulmonic valve leaflet thickness. There is no pulmonic stenosis present. There is trace pulmonic valve regurgitation.</li>
+                                                    <li><b>IVC/SVC: </b>Using inferior vena cava size and collapsibility, there is indeterminate right atrial pressure (8mmHg).</li>
+                                                    <li><b>Pulmonary Artery: </b>The right ventricular systolic pressure is 43 mm Hg. Mild (40-49 mm Hg) pulmonary hypertension is present.</li>
+                                                    <li><b>Pericardium: </b>A pericardial effusion is not present.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </a>
                                 </td>
                             </tr>
@@ -363,14 +416,22 @@
                             </tr>
                             <tr>
                                 <td>Last LHC</td>
-                                <!-- clickable -->
                                 <td>02/16/2017</td>
+
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>
-                                    <a>
+                                    <a href="#expandcardcath">
                                         <h7>more...</h7>
+                                        <div id="expandcardcath" class="modalDialog square">
+                                            <div>
+                                                <a href="#close" title="Close" class="close">x</a>
+                                                <a class="session-label">CARDCATH</a>
+                                                <p><b>Last LHC:</b>
+                                                    <h7>02/2016</h7> LIMA to LAD patent, occluded SVD to OM and RCA, LM. Severe diffuse disease mid to distal LAD, LCX and RCA - severely disease (chronically occluded).</p>
+                                            </div>
+                                        </div>
                                     </a>
                                 </td>
                             </tr>
@@ -413,7 +474,8 @@
 
     <!-- End Document
   -->
-    <script src="src/jquery.popup.min.js"></script>
+
+
 
 </body>
 
