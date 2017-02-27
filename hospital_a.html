@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<! -- CORA Interface (testing) for Multidisciplinary LVAD Decision Meeting --
+-------------------- Copyright: Carnegie Mellon University -------------------
+------ Creater/Contact: Qian Yang (qyang1 at cs dot cmu dot edu) ------------->
+
+<! -- CSS/JS References -- >
+<! -- www.getskeleton.com; github.com/jiahuang/d3-timeline; jsfiddle.net/kumarmuthaliar/GG9Sa ------>
+
+
+<head>
+
+    <!-- Basic Page Needs  -->
+    <meta charset="utf-8">
+    <title>CORA for Hospital A</title>
+    <meta name="description" content="">
+    <meta name="author" content="CORA Interface (testing) for Multidisciplinary LVAD Decision Meeting. Copyright: Carnegie Mellon University. Creater/Contact: Qian Yang (qyang1 at cs dot cmu dot edu).">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="styesheet" href="css/popup.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!-- JS for D3 -->
+    <script src="src/jquery-3.1.1.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="src/d3-timeline.js"></script>
+
+    <!-- timeline -->
+    <script src="src/history.js"></script>
+
+    <!-- popup details -->
+    <script src="src/popup.js"></script>
+</head>
+
+<body>
+    <div class="container" style="margin-top: 5%">
+        <div class="row">
+            <div class="one-third column" id="info">
+                <h4 class="docs-header">Adams, John <h7>(Hypothetical Patient)</h7></h4>
+                <h6>Date of Presentation: 03/01/2017</h6>
+
+                <nav class="navbar" style="margin-bottom: 5%">
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <a class="navbar-link">73M</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link">CAA</a>
+                            <!-- (Caucasion aferican america) -->
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link">AB+</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link">BMI 29.4</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link">out-pt</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <!------ overview ------>
+                <div class="table-grid" style="margin-bottom: 5%">
+                    <div class="row">
+                        <div class="three columns label">Prm Dx</div>
+                        <div class="nine columns"><a>Ischemic</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns label">Indication</div>
+                        <div class="six columns"><a>DT LVAD</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns label">Transplant</div>
+                        <div class="six columns"><a>Ineligible</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="seven columns label">Major Comorbidities</div>
+                        <div class="five columns">
+                            <a href="#expandcomorbidities">Diabetes</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="eight columns">
+                            <a href="#expandcomorbidities">History of Prosetic Cancer</a>
+                            <div id="expandcomorbidities" class="modalDialog square">
+                                <div>
+                                    <div class="plainExpandTexts">
+                                        <a href="#close" title="Close" class="close">x</a>
+                                        <a class="session-label">Major Comorbidities</a>
+                                        <ul style="padding-left: 10px">
+                                            <li><b>Diabetes mellitus type 2:</b> NIDDM, Dx 2001, mild peripheral neuropathy and CKD stage III;</li>
+                                            <li><b>History of Prosetic Cancer:</b> CABG 03/2013 - LIMA to LAD, SVG to OM and RCA;</li>
+                                            <li><b>Ventricular Tachycardia:</b> ICD shocks for monomorphic VT 11/2016, started on Amiodarone;</li>
+                                            <li><b>CKD stage III:</b> Dx 2016, likely related to DM and cardio renal syndrome; eGFR 50</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="four columns">
+                            <a href="#expandcomorbidities">LVD</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns label">Insurance</div>
+                        <div class="six columns"><a>Medicare</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns label">Psycho-social</div>
+                        <div class="six columns"><a>Approved</a></div>
+                    </div>
+                </div>
+
+                <!-- prediction -->
+                <div class="square">
+                    <p class="session-label">Projection</p>
+                    <div class="table-grid row">
+                        <div class="four columns "><a>1-yr survival</a></div>
+                        <div class="two columns "><a>Med</a></div>
+                        <div class="two columns "><a>72%</a></div>
+                        <h7 style="line-height: 30px">Seattle Risk Model</h7>
+                    </div>
+                    <div class="table-grid row">
+                        <div class="four columns "><a>1-yr survival</a></div>
+                        <div class="two columns "><a>VAD</a></div>
+                        <div class="two columns "><a>72%</a></div>
+                        <h7 style="line-height: 30px">CORA</h7>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2ND COLUMN -->
+            <div class="four columns" id="info">
+
+                <a class="session-label">History</a>
+                <div id="svgcontainer">
+                    <div id="timeline2_combine"></div>
+                </div>
+                <table style="margin-top: 10px; width: 100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a style="color:#1f77b4">&#9679;</a>
+                                <h7>1</h7>
+                            </td>
+                            <td>STEMI</td>
+                            <td>02/2012</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a style="color:#1f77b4">&#9679;</a>
+                                <h7>2</h7>
+                            </td>
+                            <td>HFEF Dx</td>
+                            <td>03/2012</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a style="color:#1f77b4">&#9679;</a>
+                                <h7>3</h7>
+                            </td>
+                            <td>NYHA ClassII</td>
+                            <td>06/2012 ICD</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a style="color:#1f77b4">&#9679;</a>
+                                <h7>4</h7>
+                            </td>
+                            <td>Add Inotrope</td>
+                            <td>11/2016</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a style="color:#1f77b4">&#9679;</a>
+                                <h7>5</h7>
+                            </td>
+                            <td>Referred for MCS</td>
+                            <td>02/2017</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+                <table class="u-full-width">
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>One previous cardiac surgery
+                                <a href="#expandhistory">
+                                    <h7>details</h7>
+                                    <div id="expandhistory" class="modalDialog square">
+                                        <div>
+                                            <a href="#close" title="Close" class="close">x</a>
+                                            <a class="session-label">Cardiac Surgery History</a>
+                                            <p>CABG 03/2013 - LIMA to LAD, SVG to OM and RCA</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <!-- timeline chart -->
+                <a class="session-label">Labs <h7>02/2017</h7></a>
+                <div class="two-col-table u-full-width">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>HGB</td>
+                                <td>9.7</td>
+                            </tr>
+                            <tr>
+                                <td>WBC</td>
+                                <td>4.44</td>
+                            </tr>
+                            <tr>
+                                <td>PLT</td>
+                                <td>193</td>
+                            </tr>
+                            <tr>
+                                <td>CREAT</td>
+                                <td>1.16</td>
+                            </tr>
+                            <tr>
+                                <td>HGBA1C</td>
+                                <td>5.2</td>
+                            </tr>
+                            <tr>
+                                <td>SGPT</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>SGOT</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>ALB</td>
+                                <td>3.4</td>
+                            </tr>
+                            <tr>
+                                <td>PALB</td>
+                                <td>16.0</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a href="#expandlab">
+                                        <h7>more</h7>
+                                        <div id="expandlab" class="modalDialog square">
+                                            <div>
+                                                <a href="#close" title="Close" class="close">x</a>
+                                                <a class="session-label">Labs</a>
+                                                <p class="plainExpandTexts">CABG 03/2013 - LIMA to LAD, SVG to OM and RCA</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a class="session-label">MORE</a>
+                <nav class="navbar" style="padding-left:10px">
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <a>
+                                <h6>ABI</h6>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a><h6>CT Scan</h6></a>
+                        </li>
+                        <li class="navbar-item">
+                            <a><h6>Others</h6></a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+            </div>
+
+            <div class="two columns" id="info">
+                <div class="two-col table">
+                    <a class="session-label">ECHO <h7>02/2017</h7></a>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>LVEDD</td>
+                                <td>8.3</td>
+                            </tr>
+                            <tr>
+                                <td>LVEF</td>
+                                <td>14%</td>
+                            </tr>
+                            <tr>
+                                <td>RV Func</td>
+                                <td>Moderate</td>
+                            </tr>
+                            <tr>
+                                <td>PASP</td>
+                                <td>60</td>
+                            </tr>
+                            <tr>
+                                <td>MR</td>
+                                <td>Moderate Severe</td>
+                            </tr>
+                            <tr>
+                                <td>TR</td>
+                                <td>Moderate</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a href="#expandecho">
+                                        <h7>more...</h7>
+                                        <div id="expandecho" class="modalDialog square">
+                                            <div>
+                                                <a href="#close" title="Close" class="close">x</a>
+                                                <a class="session-label">ECHO</a>
+                                                <ul style="padding-left: 10px">
+                                                    <li><b>Left Ventricle: </b>Left ventricle is severely dilated. The left ventricular systolic function is severely decreased. The left ventricular ejection fraction is 15 - 19% (normal LVEF is 55%-74%). There is Left ventricular global hypokinesis present. Left ventricular diastolic dysfunction is present, consistent with restrictive physiology (Grade III). Left atrial pressure is elevated.</li>
+                                                    <li><b>Left Atrium:</b> The left atrium is moderately dilated. Interatrial Septum - The interatrial septum appears normal.</li>
+                                                    <li><b>Right Ventricle: </b>The right ventricle is severely dilated. The right ventricle has a mildly to moderately reduced systolic function. There is a pacemaker or ICD lead present in the right ventricle.</li>
+                                                    <li><b>Right Atrium:</b> The right atrium is dilated. Aorta - Normal aortic root, size and contour. Aortic Valve - The aortic valve has normal trileaflet morphology, no stenosis and no regurgitation. Mitral Valve - The mitral valve leaflets have focal calcification. There is moderate (2-3+) mitral regurgitation. The jet is eccentric and posteriorly-directed.</li>
+                                                    <li><b>Tricuspid Valve:</b> The tricuspid valve has normal leaflet thickness. There is no significant stenosis of the tricuspid valve present. There is mild to moderate (1-2+) tricuspid valve regurgitation present. Pulmonic Valve - There is normal pulmonic valve leaflet thickness. There is no pulmonic stenosis present. There is trace pulmonic valve regurgitation.</li>
+                                                    <li><b>IVC/SVC: </b>Using inferior vena cava size and collapsibility, there is indeterminate right atrial pressure (8mmHg).</li>
+                                                    <li><b>Pulmonary Artery: </b>The right ventricular systolic pressure is 43 mm Hg. Mild (40-49 mm Hg) pulmonary hypertension is present.</li>
+                                                    <li><b>Pericardium: </b>A pericardial effusion is not present.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="session-label">Cardiac Med</a>
+
+                    <table style="margin-top: 10px; width: 100%">
+                    </table>
+                </div>
+
+            </div>
+
+
+
+            <div class="two columns">
+                <a class="session-label">CARDCATH <h7>02/2017</h7></a>
+                <div>
+                    <table class="u-full-width">
+                        <tbody>
+                            <!-- left col: Right Cardcath-->
+                            <tr>
+                                <td>RA</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>PAP</td>
+                                <td>73/34 (51)</td>
+                            </tr>
+                            <tr>
+                                <td>PCWP</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>TPG</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>SVR</td>
+                                <td>1200</td>
+                            </tr>
+                            <tr>
+                                <td>CI</td>
+                                <td>2.18</td>
+                            </tr>
+                            <tr>
+                                <td>SVO2</td>
+                                <td>42</td>
+                            </tr>
+                            <tr>
+                                <td>PVR</td>
+                                <td>305</td>
+                            </tr>
+                            <!-- right col: Others-->
+                            <tr>
+                                <td>Peak VO2</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>RER</td>
+                                <td>1.1</td>
+                            </tr>
+                            <tr>
+                                <td>6MWD</td>
+                                <td>240m</td>
+                            </tr>
+                            <tr>
+                                <td>Last LHC</td>
+                                <td>02/16/2017</td>
+
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a href="#expandcardcath">
+                                        <h7>more...</h7>
+                                        <div id="expandcardcath" class="modalDialog square">
+                                            <div>
+                                                <a href="#close" title="Close" class="close">x</a>
+                                                <a class="session-label">CARDCATH</a>
+                                                <p><b>Last LHC:</b>
+                                                    <h7>02/2016</h7> LIMA to LAD patent, occluded SVD to OM and RCA, LM. Severe diffuse disease mid to distal LAD, LCX and RCA - severely disease (chronically occluded).</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <a class="session-label">PFT <h7>02/2017</h7></a>
+                <table class="u-full-width">
+                    <tbody>
+                        <tr>
+                            <td>FEV1</td>
+                            <td>2.16</td>
+                        </tr>
+                        <tr>
+                            <td>DLCO</td>
+                            <td>58</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a class="session-label">EKG <h7>02/2017</h7></a>
+                <table class="u-full-width">
+                    <tbody>
+                        <tr>
+                            <td>QRS</td>
+                            <td>168</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            <div class="three columns" id="info">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- End Document
+  -->
+
+
+
+</body>
+
+</html>
