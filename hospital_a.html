@@ -55,8 +55,8 @@
                             <a class="navbar-link">73M</a>
                         </li>
                         <li class="navbar-item">
-                            <a class="navbar-link">CAA</a>
-                            <!-- (Caucasion aferican america) -->
+                            <a class="navbar-link">AA</a>
+                            <!-- (Caucasion/ aferican america) -->
                         </li>
                         <li class="navbar-item">
                             <a class="navbar-link">AB+</a>
@@ -105,6 +105,10 @@
                         <div class="six columns">
                             <a href="#expandcomorbidities">CKD Stage III</a>
                         </div>
+                        <div class="three columns label"></div>
+                        <div class="eight columns">
+                            <a href="#expandcomorbidities">Pulmonary hypertension</a>
+                        </div>
                         <div id="expandcomorbidities" class="modalDialog square">
                             <div>
                                 <div class="plainExpandTexts">
@@ -115,6 +119,7 @@
                                         <li><b>History of Prosetic Cancer:</b> CABG 03/2013 - LIMA to LAD, SVG to OM and RCA;</li>
                                         <li><b>Ventricular Tachycardia:</b> ICD shocks for monomorphic VT 11/2016, started on Amiodarone;</li>
                                         <li><b>CKD stage III:</b> Dx 2016, likely related to DM and cardio renal syndrome; eGFR 50</li>
+                                        <li><b>Pulmonary hypertension from left heart disease</b>DX 7/2015: RA 12, PA 61/36 (47), W31 TTE 02/2017 – est. PASP 60 mm Hg</li>
                                     </ul>
 
                                 </div>
@@ -174,7 +179,7 @@
                                 <a style="color:#1f77b4">&#9679;</a>
                                 <h7>2</h7>
                             </td>
-                            <td>HFEF Dx</td>
+                            <td>HFrEF Dx</td>
                             <td>03/2012</td>
                         </tr>
                         <tr>
@@ -297,12 +302,63 @@
                 <nav class="navbar" style="padding-left:10px">
                     <ul class="navbar-list">
                         <li class="navbar-item">
-                            <a>
+                            <a href="#expandABI">
                                 <h6>ABI</h6>
-                            </a>
+                                <div id="expandABI" class="modalDialog square">
+                                    <div>
+                                        <a href="#close" title="Close" class="close">x</a>
+                                        <a class="session-label">CT Scan</a>
+                                        <p style="padding-left: 10px"><b>Normal bilateral physiologic lower extremity arterial study:</b> The patient has normal bilateral lower extremity arterial circulation at rest. The findings exclude the possibility of limb threatening ischemia from large vessel occlusive disease. However, subtle arterial occlusive lesions are not excluded. Exercise provocation may be necessary to demonstrate such lesions. If clinically indicated, the study could be repeated with treadmill provocation.
+                                        </p></div></div></a>
                         </li>
                         <li class="navbar-item">
-                            <a><h6>CT Scan</h6></a>
+                            <a href="#expandCT">
+                                <h6>CT Scan</h6>
+                                <div id="expandCT" class="modalDialog square">
+                                    <div>
+                                        <a href="#close" title="Close" class="close">x</a>
+                                        <a class="session-label">CT Scan</a>
+                                        <p style="padding-left: 10px">
+                                            <b>CT Chest Lower chest:</b>
+                                            <ul>
+                                                <li>The known left lower lobe of pulmonary hamartoma is partially imaged. There are calcified granulomata in the right lower lobe. Mosaic attenuation of the lung bases could be due to air trapping or pulmonary edema. Pacemaker leads are present in the right atrium and right ventricle. </li>
+                                                <li>EG junction, stomach and duodenal sweep: Unremarkable.</li>
+                                                <li>Liver: Normal appearing.</li>
+                                                <li>Gallbladder: Normal appearing.</li>
+                                                <li>Biliary tree: No intrahepatic or extrahepatic biliary ductal dilatation.</li>
+                                                <li>Pancreas: Normal appearing. Spleen: Normal appearing.</li>
+                                                <li>Kidneys and ureters: A punctate nonobstructing calculus is present in the upper pole of the right kidney.</li>
+                                                <li>No ureterolithiasis or hydronephrosis.</li>
+                                                <li>Adrenal glands: Normal appearing.</li>
+                                                <li>Retroperitoneal structures: Heavy atherosclerotic calcifications are present in the nonaneurysmal abdominal aorta.</li>
+                                                <li>Small bowel and colon: Colonic diverticulosis is present without CT evidence of acute diverticulitis.</li>
+                                                <li>Appendix: Normal appearing.</li>
+                                                <li>Urinary bladder: Nearly completely collapsed.</li>
+                                                <li>Free air: None.</li>
+                                                <li>Free fluid: None.</li>
+                                                <li>Lymph nodes: No enlarged lymph nodes identified in the abdomen or pelvis.</li>
+                                                <li>Osseous structures: No aggressive osseous lesions.</li>
+                                                <li>Other: There is a small fat containing umbilical hernia.</li>
+                                            </ul>
+                                            <b>Impressions:</b>
+                                            <ul>
+                                                <li>No acute inflammatory or obstructive process in the abdomen or pelvis.</li>
+                                                <li>Nonobstructing right upper pole renal calculus.</li>
+                                            </ul>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#expandECG">
+                                <h6>ECG</h6>
+                                <div id="expandECG" class="modalDialog square">
+                                    <div>
+                                        <a href="#close" title="Close" class="close">x</a>
+                                        <a class="session-label">ECG</a>
+                                        <img src="img/p1_ecg.png" alt="Hospital A Patient 1 ECG" width="100%">
+                                    </div></div></a>
                         </li>
                         <li class="navbar-item">
                             <a><h6>Others</h6></a>
@@ -369,16 +425,16 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a class="session-label">Cardiac Med</a>
+                    <a class="session-label">Cardiac Meds</a>
 
                     <table style="margin-top: 10px; width: 100%">
                         <tbody>
                             <tr>
                                 <td>ASA</td>
-                                <td>82 mg</td>
+                                <td>81 mg</td>
                             </tr>
                             <tr>
-                                <td>Planix</td>
+                                <td>Plavix</td>
                                 <td>75 mg</td>
                             </tr>
                             <tr>
@@ -387,7 +443,7 @@
                             </tr>
                             <tr>
                                 <td>Amiodarone</td>
-                                <td></td>
+                                <td>400 mg/day</td>
                             </tr>
                             <tr>
                                 <td>Aldactone</td>
