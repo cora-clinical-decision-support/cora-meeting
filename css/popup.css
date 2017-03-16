@@ -1,54 +1,212 @@
-/*-------------------------------
-
-	POPUP.CSS
-
--------------------------------*/
-
-.popup_back {
-    height: 100%;
+#simple-popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
     left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+    right: 0;
+    z-index: 100001;
 }
-.popup_cont {
-    position: fixed;
-    z-index: 102;
-}
-.preloader {
-    z-index: 101;
-}
-
-/*---------------------
-
-	EDIT BELOW
-
-*/
-
-.popup_close {
-    color: whitesmoke;
-    cursor: pointer;
+.simple-popup-content {
     position: absolute;
-    padding: 5px;
-    right: 5px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    /* Safari <= 8.1 :-( */
+    -ms-transform: translate(-50%, -50%);
+    /* Bloody IE9 */
+    transform: translate(-50%, -50%);
+    max-height: 80%;
+    min-height: 40%;
+    max-width: 100%;
+    z-index: 100002;
+    padding: 20px 20px;
+    overflow: auto;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -ms-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+}
+.simple-popup-content .close {
+    position: absolute;
+    right: 0;
     top: 0;
 }
-.popup_close:hover {
-    color: coral;
+.simple-popup-content .close::before {
+    display: inline-block;
+    text-align: center;
+    content: "\00d7";
+    font-size: 20px;
+    color: lightgrey;
+    width: 20px;
+    line-height: 20px;
 }
-.popup_back {
+.simple-popup-content .close:hover {
+    cursor: hand;
     cursor: pointer;
-    background-color: coral;
 }
-div.popup {
-    background: #fff;
-    padding: 25px;
-    box-shadow: 0 3px 10px coral;
+.simple-popup-content .close:hover::before {
+    color: grey;
 }
-.preloader {
-    left: 50%;
-    margin: -10px 0 0 -25px;
+#simple-popup-backdrop,
+.simple-popup-backdrop-content {
     position: fixed;
-    top: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000;
+}
+#simple-popup,
+#simple-popup-backdrop,
+#simple-popup.hide-it,
+#simple-popup-backdrop.hide-it {
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -ms-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+}
+#simple-popup.hide-it,
+#simple-popup-backdrop.hide-it {
+    opacity: 0;
+}
+#simple-popup,
+#simple-popup-backdrop {
+    opacity: 1;
+}
+
+/* ----- */
+
+.mdl-layout__drawer-button {
+    color: black;
+    margin: 0px 0px 0px 0px;
+}
+h7 {
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: -0.05rem;
+    text-align: right;
+    margin-left: 1%;
+}
+.close {
+    color: black;
+    font-size: 20px;
+    line-height: 20px;
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    /* -12px, -10px */
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    z-index: 99999;
+}
+
+/*!
+ * Waves v0.6.0
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
+ */
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    transition: .3s ease-out
+}
+.waves-effect .waves-ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.7s ease-out;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    pointer-events: none
+}
+.waves-effect.waves-light .waves-ripple {
+    background-color: rgba(255, 255, 255, 0.45)
+}
+.waves-effect.waves-red .waves-ripple {
+    background-color: rgba(244, 67, 54, 0.7)
+}
+.waves-effect.waves-yellow .waves-ripple {
+    background-color: rgba(255, 235, 59, 0.7)
+}
+.waves-effect.waves-orange .waves-ripple {
+    background-color: rgba(255, 152, 0, 0.7)
+}
+.waves-effect.waves-purple .waves-ripple {
+    background-color: rgba(156, 39, 176, 0.7)
+}
+.waves-effect.waves-green .waves-ripple {
+    background-color: rgba(76, 175, 80, 0.7)
+}
+.waves-effect.waves-teal .waves-ripple {
+    background-color: rgba(0, 150, 136, 0.7)
+}
+.waves-effect input[type="button"],
+.waves-effect input[type="reset"],
+.waves-effect input[type="submit"] {
+    border: 0;
+    font-style: normal;
+    font-size: inherit;
+    text-transform: inherit;
+    background: none
+}
+.waves-effect img {
+    position: relative;
+    z-index: -1
+}
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #fafafa;
+    padding: 0;
+    max-height: 90%;
+    width: 55%;
+    margin: auto;
+    overflow-y: auto;
+    border-radius: 2px;
+    will-change: top, opacity
+}
+@media only screen and (max-width: 992px) {
+    .modal {
+        width: 80%
+    }
+}
+.modal h1,
+.modal h2,
+.modal h3,
+.modal h4 {
+    margin-top: 0
+}
+.modal .modal-content {
+    padding: 24px
+}
+.modal-content p {
+    padding-left: 8px;
 }

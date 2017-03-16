@@ -1,0 +1,626 @@
+[
+    [
+        {
+            "date": "2013-05-01",
+            "value": 130,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2013-06-01",
+            "value": 130,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2013-07-01",
+            "value": 128,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2013-08-01",
+            "value": 129,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2013-09-01",
+            "value": 130,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2013-10-01",
+            "value": 128,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2013-11-01",
+            "value": 129,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2013-12-01",
+            "value": 122,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-01-01",
+            "value": 110,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-01-03",
+            "value": 115,
+
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-01-04",
+            "value": 116,
+
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-01-05",
+            "value": 120,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-01-06",
+            "value": 123,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-01-07",
+            "value": 125,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-02-01",
+            "value": 124,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-03-01",
+            "value": 122,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-04-01",
+            "value": 120,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-05-01",
+            "value": 121,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-06-01",
+            "value": 119,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-07-01",
+            "value": 115,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-08-01",
+            "value": 116,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-09-01",
+            "value": 115,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-10-01",
+            "value": 110,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-11-01",
+            "value": 115,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2014-12-01",
+            "value": 122,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-01-01",
+            "value": 125,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-02-01",
+            "value": 124,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-03-01",
+            "value": 122,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-04-01",
+            "value": 120,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-05-01",
+            "value": 121,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-06-01",
+            "value": 119,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-07-01",
+            "value": 115,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-08-01",
+            "value": 116,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-09-01",
+            "value": 115,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-10-01",
+            "value": 110,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-11-01",
+            "value": 115,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2015-12-01",
+            "value": 112,
+            "hspt": null,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-01-01",
+            "value": 111,
+
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-02-01",
+            "value": 116,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-03-01",
+            "value": 110,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-03-02",
+            "value": 112,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-03-03",
+            "value": 113,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-03-04",
+            "value": 112,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-03-05",
+            "value": 113,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-03-06",
+            "value": 114,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-03-07",
+            "value": 113,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-03-08",
+            "value": 112,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-03-09",
+            "value": 117,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-03-10",
+            "value": 117,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-04-01",
+            "value": 115,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-05-01",
+            "value": 110,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-01",
+            "value": 106,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-14",
+            "value": 100,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-15",
+            "value": 102,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-16",
+            "value": 103,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-17",
+            "value": 103,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-18",
+            "value": 105,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-19",
+            "value": 108,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-20",
+            "value": 106,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-21",
+            "value": 110,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-22",
+            "value": 111,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-23",
+            "value": 111,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-24",
+            "value": 112,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-25",
+            "value": 115,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-06-26",
+            "value": 116,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-07-01",
+            "value": 112,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-01",
+            "value": 105,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-14",
+            "value": 95,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-15",
+            "value": 102,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-16",
+            "value": 100,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-17",
+            "value": 103,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-18",
+            "value": 105,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-19",
+            "value": 104,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-20",
+            "value": 106,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-21",
+            "value": 108,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-22",
+            "value": 108,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-23",
+            "value": 109,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-24",
+            "value": 110,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-25",
+            "value": 110,
+            "vad": null,
+            "med": null
+        },
+
+        {
+            "date": "2016-08-26",
+            "value": 111,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-27",
+            "value": 112,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-28",
+            "value": 112,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-08-29",
+            "value": 112,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-09-01",
+            "value": 106,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2016-10-01",
+            "value": 105,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2017-01-01",
+            "value": 100,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2017-02-01",
+            "value": 101,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2017-02-25",
+            "value": 90,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2017-02-26",
+            "value": 91,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2017-02-27",
+            "value": 91,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2017-02-28",
+            "value": 92,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2017-03-01",
+            "value": 92,
+            "vad": null,
+            "med": null
+        },
+        {
+            "date": "2017-03-05",
+            "value": null,
+            "hspt": null,
+            "vad": null,
+            "med": 90,
+            "vad_upper": null,
+            "vad_lower": null,
+            "med_upper": 95,
+            "med_lower": 0
+        },
+        {
+            "date": "2017-04-01",
+            "value": null,
+            "hspt": null,
+            "vad": 154,
+            "med": 90,
+            "vad_upper": 160,
+            "vad_lower": 120,
+            "med_upper": 95,
+            "med_lower": 0
+        },
+        {
+            "date": "2017-09-05",
+            "value": null,
+            "hspt": null,
+            "vad": 154,
+            "med": 90,
+            "vad_upper": 160,
+            "vad_lower": 120,
+            "med_upper": 95,
+            "med_lower": 0
+        },
+        {
+            "date": "2019-03-01",
+            "value": null,
+            "hspt": null,
+            "vad": 90,
+            "med": 0,
+            "vad_upper": 120,
+            "vad_lower": 80,
+            "med_upper": 0,
+            "med_lower": 0
+            }
+            ]
+]
