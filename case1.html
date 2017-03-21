@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- CORA Interface (testing) for Multidisciplinary LVAD Decision Meeting --
--------------------- Copyright: Carnegie Mellon University -------------------
------- Creater/Contact: Qian Yang (qyang1 at cs dot cmu dot edu) ------------->
-
-<!-- CSS/JS References -- >
-<!-- www.getskeleton.com; github.com/jiahuang/d3-timeline; jsfiddle.net/kumarmuthaliar/GG9Sa ------>
+<!doctype html>
 <!--
   Material Design Lite
   Copyright 2015 Google Inc. All rights reserved.
@@ -26,7 +19,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CORA for Hospital A</title>
+    <title>CORA Case John Adams</title>
     <meta name="description" content="CORA Interface (testing) for Multidisciplinary LVAD Decision Meeting. Copyright: Carnegie Mellon University.">
     <meta name="author" content="Qian Yang (qyang1 at cs dot cmu dot edu)">
 
@@ -151,7 +144,7 @@
                             <h1 class="mdl-card__title-text ">John, Adams</h1>
                         </div>
                         <div class="mdl-card__supporting-text ">
-                            Date of Presentation: 03/01/2017
+                            Date of Presentation: 03/22/2017
                         </div>
                         <div class="pt-brief-bar ">
                             <ul class="pt-brief-list ">
@@ -168,34 +161,109 @@
                             Prm Dx
                         </div>
                         <div class="mdl-chip ">
-                            <h3 class="mdl-chip__text min-width ">Ischemic</h3>
+                            <h3 class="mdl-chip__text min-width expandDx waves-effect waves-light btn">Ischemic</h3>
+                            <div id="expandDx" class="modal">
+                                <div class="modal-content">
+                                    <div class="pt-brief-bar">
+                                        <p class="section-header">Primary Diagnosis</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h7>2012</h7> First Dx.</li>
+                                        <li>
+                                            <h7>02/2012</h7> First MI, DES to LCX.</li>
+                                        <li>
+                                            <h7>03/2012</h7> TTE, LVEF 15%, LVEDD 58 mm.</li>
+                                        <li>
+                                            <h7>06/2012</h7> TTE, LVEF 30%, LVEDD 62 mm.</li>
+                                        <li>
+                                            <h7>03/2013</h7> Abnormal stress test, referred for CABG.</li>
+                                        <li>
+                                            <h7>11/2016</h7> TTE, LVEF 10-20%, LVEDD 68 mm. Stress VO2.</li>
+                                        <li>
+                                            <h7>02/2017</h7> pVO2 12, RER 1.1.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="pt-brief-item summary">Major Comorbidities</div>
                         <div class="mdl-chip ">
-                            <h3 class="mdl-chip__text">Diabetes TypeII</h3>
+                            <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">Diabetes Type II</h3>
                         </div>
                         <div class="mdl-chip ">
-                            <h3 class="mdl-chip__text">Hist. of Prostate Cancer</h3>
+                            <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">Hist. of Prostate Cancer</h3>
                         </div>
                         <div class="mdl-chip ">
-                            <h3 class="mdl-chip__text">VT</h3>
+                            <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">VT</h3>
                         </div>
                         <div class="mdl-chip ">
-                            <h3 class="mdl-chip__text">CKD Stage III</h3>
-                        </div>
-                        <div class="pt-brief-item summary">
-                            Indication
-                        </div>
-                        <div class="mdl-chip ">
-                            <h3 class="mdl-chip__text min-width ">DTT LVAD</h3>
-                        </div>
-                        <div class="pt-brief-item summary">
-                            Transplant
-                        </div>
-                        <div class="mdl-chip ">
-                            <h3 class="mdl-chip__text min-width ">Ineligible</h3>
+                            <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">CKD Stage III</h3>
                         </div>
 
+                        <div class="pt-brief-item summary">
+                            Indication
+                            <div class="mdl-chip half-chip">
+                                <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">DT LVAD</h3>
+                            </div>
+                        </div>
+
+                        <div class="pt-brief-item summary">
+                            Projection
+                            <div class="mdl-chip half-chip">
+                                <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">56% 1yr Survival</h3>
+                            </div>
+                        </div>
+
+                        <div id="expandCmbdt" class="modal">
+                            <div class="modal-content">
+                                <div class="pt-brief-bar">
+                                    <p class="section-header">Major Comorbidities</p>
+                                </div>
+                                <ul style="padding-left: 10px">
+                                    <li><b>Diabetes mellitus type 2:</b> NIDDM, Dx 2001, mild peripheral neuropathy and CKD stage III;</li>
+                                    <li><b>History of Prosetic Cancer:</b> CABG 03/2013 - LIMA to LAD, SVG to OM and RCA;</li>
+                                    <li><b>Ventricular Tachycardia:</b> ICD shocks for monomorphic VT 11/2016, started on Amiodarone;</li>
+
+                                    <li><b>CKD stage III:</b> Dx 2016, likely related to DM and cardio renal syndrome; eGFR 50</li>
+
+                                    <li><b>Pulmonary hypertension from left heart disease:</b> DX 7/2015: RA 12, PA 61/36 (47), W31 TTE 02/2017 – est. PASP 60 mm Hg.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="pt-brief-item summary">
+                            Transplant
+                            <div class="mdl-chip half-chip">
+                                <h3 class="mdl-chip__text min-width ">Ineligible</h3>
+                            </div>
+                        </div>
+
+
+                        <div class="pt-brief-item summary">
+                            Psycho-social
+                            <div class="mdl-chip half-chip">
+                                <h3 class="mdl-chip__text min-width">Approved</h3>
+                            </div>
+                        </div>
+
+
+                        <div class="pt-brief-item summary">
+                            Insurance
+                            <div class="mdl-chip half-chip">
+                                <h3 class="mdl-chip__text min-width expandInsurance waves-effect waves-light btn">Medicare</h3>
+                                <div id="expandInsurance" class="modal">
+                                    <div class="modal-content">
+                                        <div class="pt-brief-bar">
+                                            <p class="section-header">Insurance</p>
+                                        </div>
+                                        <p><b>Has patient met with a transplant financial coordinator to review financial capabilities and resources? </b>Yes.</p>
+                                        <p><b>Insurance Comments: </b>Voiced no concerns</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -490,6 +558,24 @@
                                             <td>DLCO</td>
                                             <td>58</td>
                                         </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <!-- Modal Trigger -->
+                                                <h7 class="expandPFT waves-effect waves-light btn">more...</h7>
+
+
+                                                <!-- Modal Structure -->
+                                                <div id="expandPFT" class="modal">
+                                                    <div class="modal-content">
+                                                        <div class="pt-brief-bar">
+                                                            <p class="section-header">PFT</p>
+                                                        </div>
+                                                        <p><b>Quality of Data:</b> The patient's efforts are acceptable and reproducible.<br><b>Test Performed:</b> Complete pulmonary function tests, including spirometry with and without bronchodilator, measurement of lung volume, and diffusing capacity.<br><b>Spirometry Interpretation:</b> FEV1/FVC ratio is 66% predicted. FEV1 is 85% predicted. No significant bronchodilator response. FVC is 90% predicted.<br><b>Flow Volume Loops:</b> Flow-Volume loops are normal.<br><b>Lung Volumes:</b> Plethysmographic lung volumes are within normal limits.<br><b>Diffusing Capacity:</b> Diffusing capacity of the lung is reduced at 58 % predicted.<br><b>Conclusions:</b> Mild obstructive lung defect with FEV1 of 85%. No restriction noted. No bronchodilator response. Moderate decrease in diffusion capacity.</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -508,6 +594,23 @@
                                         <tr>
                                             <td>Rhythm</td>
                                             <td>A fib</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <!-- Modal Trigger -->
+                                                <h7 class="expandEKG waves-effect waves-light btn">more...</h7>
+
+                                                <!-- Modal Structure -->
+                                                <div id="expandEKG" class="modal">
+                                                    <div class="modal-content">
+                                                        <div class="pt-brief-bar">
+                                                            <p class="section-header">EKG</p>
+                                                        </div>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -699,6 +802,31 @@
 
     <script>
         $(document).ready(function() {
+            $("h3.expandDx").on("click", function(e) {
+                e.preventDefault();
+                $(this).simplePopup({
+                    type: "html",
+                    htmlSelector: "#expandDx"
+                });
+            });
+
+            $("h3.expandCmbdt").on("click", function(e) {
+                e.preventDefault();
+                $(this).simplePopup({
+                    type: "html",
+                    htmlSelector: "#expandCmbdt"
+                });
+            });
+
+            $("h3.expandInsurance").on("click", function(e) {
+                e.preventDefault();
+                $(this).simplePopup({
+                    type: "html",
+                    htmlSelector: "#expandInsurance"
+                });
+            });
+
+
             $("h7.expandLabs").on("click", function(e) {
                 e.preventDefault();
                 $(this).simplePopup({
@@ -722,6 +850,23 @@
                     htmlSelector: "#expandCardcath"
                 });
             });
+
+            $("h7.expandPFT").on("click", function(e) {
+                e.preventDefault();
+                $(this).simplePopup({
+                    type: "html",
+                    htmlSelector: "#expandPFT"
+                });
+            });
+            
+            $("h7.expandEKG").on("click", function(e) {
+                e.preventDefault();
+                $(this).simplePopup({
+                    type: "html",
+                    htmlSelector: "#expandEKG"
+                });
+            });
+
 
         });
 

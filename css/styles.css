@@ -38,7 +38,9 @@ h1.mdl-card__title-text {
 }
 .pt-brief-item.summary {
     margin-top: 15px;
+    margin-right: 0px;
     padding-left: 15px;
+    line-height: 32px;
 }
 .mg-regions text {
     font-size: 0.7rem;
@@ -109,7 +111,7 @@ h1.mdl-card__title-text {
     font-weight: 600;
     letter-spacing: .1rem;
     color: #222;
-    margin-right: 15px;
+    margin-right: 13px;
     margin-bottom: 0;
     position: relative;
     float: left;
@@ -161,6 +163,12 @@ h1.mdl-card__title-text {
     float: left;
     margin-left: 16px;
     background-color: #F5F5F5;
+}
+.mdl-chip.half-chip {
+    text-transform: none;
+    float: right;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .mdl-chip__text {
     font-size: 14px;

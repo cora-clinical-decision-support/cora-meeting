@@ -118,7 +118,7 @@ h7 {
     position: relative;
     cursor: pointer;
     display: inline-block;
-    overflow: hidden;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
