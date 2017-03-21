@@ -19,7 +19,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CORA Case John Adams</title>
+    <title>CORA for Hospital A</title>
     <meta name="description" content="CORA Interface (testing) for Multidisciplinary LVAD Decision Meeting. Copyright: Carnegie Mellon University.">
     <meta name="author" content="Qian Yang (qyang1 at cs dot cmu dot edu)">
 
@@ -185,7 +185,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                         <div class="pt-brief-item summary">Major Comorbidities</div>
                         <div class="mdl-chip ">
@@ -201,7 +200,7 @@
                             <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">CKD Stage III</h3>
                         </div>
 
-                        <div class="pt-brief-item summary">
+                        <div class="pt-brief-item summary" style="margin-top:15px">
                             Indication
                             <div class="mdl-chip half-chip">
                                 <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">DT LVAD</h3>
@@ -270,19 +269,36 @@
 
                 <div class="mdl-cell mdl-cell--9-col">
 
-                    <!-- Timeline Chart -->
-                    <div class="mdl-card full-width">
-                        <div class="pt-brief-bar" style="margin-bottom:0">
-                            <p class="section-header ">HISTORY</p>
-                        </div>
-                        <div class="full-width squeeze " id="timeline-chart"></div>
 
-                        <div class="projection-intervention">
-                            <p class="time-line-legend"></p>
-                            <button class="mdl-button mdl-js-button mdl-button--raised" data-y_accessor="vad" data-y_upper="vad_upper" id="default-projection-intervention" data-y_lower="vad_lower ">VAD</button>
+                    <div class="mdl-grid mdl-grid--no-spacing">
+                        <div class="mdl-card mdl-cell mdl-cell--9-col">
 
-                            <button class="mdl-button mdl-js-button mdl-button--raised" data-y_accessor="med" data-y_upper="med_upper" data-y_lower="med_lower">Medication</button>
+                            <!-- Timeline Chart -->
+                            <div class="mdl-card full-width">
+                                <div class="pt-brief-bar" style="margin-bottom:0">
+                                    <p class="section-header ">HISTORY</p>
+                                </div>
+
+                                <div class="full-width squeeze " id="timeline-chart"></div>
+
+                                <div class="projection-intervention">
+                                    <p class="time-line-legend"></p>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" data-y_accessor="vad" data-y_upper="vad_upper" id="default-projection-intervention" data-y_lower="vad_lower ">VAD</button>
+
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" data-y_accessor="med" data-y_upper="med_upper" data-y_lower="med_lower">Medication</button>
+                                </div>
+                            </div>
+
                         </div>
+
+                        <div class="mdl-card mdl-cell mdl-cell--3-col">
+                            <div class="mdl-card full-width">
+                                <div class="pt-brief-bar" style="margin-bottom:0">
+                                    <p class="section-header ">PROJECTION</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="mdl-grid mdl-grid--no-spacing">
@@ -571,7 +587,13 @@
                                                         <div class="pt-brief-bar">
                                                             <p class="section-header">PFT</p>
                                                         </div>
-                                                        <p><b>Quality of Data:</b> The patient's efforts are acceptable and reproducible.<br><b>Test Performed:</b> Complete pulmonary function tests, including spirometry with and without bronchodilator, measurement of lung volume, and diffusing capacity.<br><b>Spirometry Interpretation:</b> FEV1/FVC ratio is 66% predicted. FEV1 is 85% predicted. No significant bronchodilator response. FVC is 90% predicted.<br><b>Flow Volume Loops:</b> Flow-Volume loops are normal.<br><b>Lung Volumes:</b> Plethysmographic lung volumes are within normal limits.<br><b>Diffusing Capacity:</b> Diffusing capacity of the lung is reduced at 58 % predicted.<br><b>Conclusions:</b> Mild obstructive lung defect with FEV1 of 85%. No restriction noted. No bronchodilator response. Moderate decrease in diffusion capacity.</p>
+                                                        <p><b>Quality of Data:</b> The patient's efforts are acceptable and reproducible.
+                                                            <br><b>Test Performed:</b> Complete pulmonary function tests, including spirometry with and without bronchodilator, measurement of lung volume, and diffusing capacity.
+                                                            <br><b>Spirometry Interpretation:</b> FEV1/FVC ratio is 66% predicted. FEV1 is 85% predicted. No significant bronchodilator response. FVC is 90% predicted.
+                                                            <br><b>Flow Volume Loops:</b> Flow-Volume loops are normal.
+                                                            <br><b>Lung Volumes:</b> Plethysmographic lung volumes are within normal limits.
+                                                            <br><b>Diffusing Capacity:</b> Diffusing capacity of the lung is reduced at 58 % predicted.
+                                                            <br><b>Conclusions:</b> Mild obstructive lung defect with FEV1 of 85%. No restriction noted. No bronchodilator response. Moderate decrease in diffusion capacity.</p>
                                                     </div>
                                                 </div>
                                             </td>
@@ -665,7 +687,7 @@
                 'label': "HFrEF Dx "
             }, {
                 'date': new Date('2014-05-01T00:00:00.000Z'),
-                'label': "Cardiac Surgery CABG",
+                'label': "CABG",
                 'click': clicker
             }, {
                 'date': new Date('2015-06-01T00:00:00.000Z'),
@@ -858,7 +880,7 @@
                     htmlSelector: "#expandPFT"
                 });
             });
-            
+
             $("h7.expandEKG").on("click", function(e) {
                 e.preventDefault();
                 $(this).simplePopup({
