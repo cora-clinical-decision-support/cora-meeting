@@ -215,7 +215,7 @@ tspan.hist-symbol {
 }
 .mg-markers text {
     fill: black;
-    font-size: 1rem;
+    font-size: 0.95rem;
     opacity: 0.8;
 }
 .mg-missing-text {
@@ -294,9 +294,10 @@ tspan.mg-points-mono {
 .mg-x-axis .label,
 .mg-y-axis .label,
 .mg-axis .label {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     font-weight: 400;
+    opacity: 0.6;
 }
 .mg-x-axis-small text,
 .mg-y-axis-small text,

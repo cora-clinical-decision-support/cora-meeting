@@ -931,20 +931,19 @@ function mg_add_y_label (g, args) {
     g.append('text')
       .attr('class', 'label')
       .attr('x', function () {
-        return -1 * (mg_get_plot_top(args) +
-        ((mg_get_plot_bottom(args)) - (mg_get_plot_top(args))) / 2);
+        return (mg_get_plot_bottom(args) - mg_get_plot_top(args))/2 - 20;
+        //return -1 * (mg_get_plot_top(args) + ((mg_get_plot_bottom(args)) - (mg_get_plot_top(args))) / 2);
       })
       .attr('y', function () {
-        return args.left / 2;
+        return 30;
+        //return args.left;
       })
-      .attr('dy', '0.4em')
+      .attr('dy', '0.3em')
       .attr('text-anchor', 'middle')
       .text(function (d) {
         return args.y_label;
       })
-      .attr('transform', function (d) {
-        return 'rotate(-90)';
-      });
+      //.attr('transform', function (d) { return 'rotate(-90)'; });
   }
 }
 

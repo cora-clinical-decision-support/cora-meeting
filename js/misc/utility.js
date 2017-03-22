@@ -231,10 +231,14 @@ function mg_prevent_horizontal_overlap(labels, args) {
     if (mg_is_horizontally_overlapping(labels[i], labels)) {
       var node = d3.select(labels[i]);
       var newY = +node.attr('y');
+      var newX = +node.attr('x');
       if (newY + 8 >= args.top) {
-        newY = args.top - 16;
+        //newY = args.top - 16;
+        newY = newY - 16;
+        newX = newX - 20;
       }
       node.attr('y', newY);
+      node.attr('x', newX);
     }
   }
 }

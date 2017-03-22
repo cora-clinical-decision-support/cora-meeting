@@ -43,7 +43,10 @@ h1.mdl-card__title-text {
     padding-left: 15px;
     line-height: 32px;
 }
-
+.pt-brief-item.indication {
+    clear: both;
+    line-height: 2.5rem;
+}
 .mg-regions text {
     font-size: 0.7rem;
 }
@@ -55,19 +58,32 @@ h1.mdl-card__title-text {
     padding: 0;
     margin: 0;
 }
-#timeline-chart {
-    margin-top: 2%;
-}
 .projection-intervention {
-    text-align: right;
+    text-align: center;
     margin-bottom: 2%;
 }
 .projection-intervention p {
     display: inline-block;
 }
-.time-line-legend {
+.timeline-legend {
     display: inline-block;
+    text-align: center;
     margin-right: 5%;
+    margin-bottom: 0px;
+}
+.horizontal_dotted_line {
+    border: none;
+    border-top: 1px dotted #f00;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 40px;
+    text-align: right;
+}
+
+}
+.mdl-grid {
+    padding: 2%;
 }
 .mdl-layout {
     padding: 3% 1% 1% 1%;
@@ -83,13 +99,12 @@ h1.mdl-card__title-text {
 .mdl-card {
     display: flex;
     width: 100%;
-    padding-right: 10px;
+    padding-right: 3%;
     min-height: initial;
     margin-bottom: 10px;
 }
 
 /* Patient Brief Bar */
-
 .pt-brief-bar {
     margin-bottom: 2%;
     position: relative;
@@ -110,7 +125,9 @@ h1.mdl-card__title-text {
 .pt-brief-item {
     text-transform: uppercase;
     font-size: 13px;
-    font-weight: 500; /*original:600px*/
+    font-weight: 500;
+    /*original:600px*/
+    
     letter-spacing: .1rem;
     color: #222;
     margin-right: 13px;
@@ -121,7 +138,9 @@ h1.mdl-card__title-text {
 .section-header {
     text-transform: uppercase;
     font-size: 13px;
-    font-weight: 500; /*original:600px*/
+    font-weight: 500;
+    /*original:600px*/
+    
     letter-spacing: .15rem;
     color: #222;
     line-height: 2.5rem;
@@ -184,14 +203,13 @@ h1.mdl-card__title-text {
 }
 
 /* Table */
-
 .data-table {
     width: 100%;
     font-size: 14px;
     border-collapse: collapse;
 }
 .data-table td {
-    border-top: 1px solid rgba(0, 0, 0, .12);
+    border-top: 1px solid #F5F5F5;
     border-bottom: 1px solid rgba(0, 0, 0, .12);
     box-sizing: border-box;
     height: 28 px;
@@ -209,7 +227,6 @@ h1.mdl-card__title-text {
 }
 
 /* ----- */
-
 .mdl-demo .mdl-layout__header-row {
     padding-left: 40px;
 }
@@ -429,7 +446,6 @@ h1.mdl-card__title-text {
 }
 
 /* -- Chips -- */
-
 .chip {
     display: inline-block;
     height: 32px;

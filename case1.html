@@ -40,13 +40,19 @@
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <!-- Import Fonts & Icons -->
+    <!-- Import Fonts & Icons 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+-->
     <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/roboto.css">
+    <link rel="stylesheet" href="css/icon.css">
 
-    <!--Import material deisng css-->
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css">
+
+
+    <!--Import material deisng css
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css"> -->
+    <link rel="stylesheet" href="css/material.deep_purple-pink.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <style>
@@ -111,9 +117,11 @@
     <script type="text/javascript" src="js/prism.js"></script>
 
     <!-- JS for timeline brushing -->
-    <script src='js/mg_line_brushing.js'></script>
-    <script src='js/mg_regions.js'></script>
+    <!-- 
     <link rel='stylesheet' href='css/mg_line_brushing.css' />
+    <script src='js/mg_line_brushing.js'></script> -->
+    <script src='js/mg_regions.js'></script>
+
 
 </head>
 
@@ -155,6 +163,11 @@
                                 <li class="pt-brief-item ">OUT-PT</li>
                             </ul>
                         </div>
+                        <div class="pt-brief-bar">
+                            <ul class="pt-brief-list ">
+                                <li class="pt-brief-item ">Indication: DT LVAD</li>
+                            </ul>
+                        </div>
 
                         <!-- Key Medical Condition -->
                         <div class="pt-brief-item summary">
@@ -172,12 +185,16 @@
                                             <h7>2012</h7> First Dx.</li>
                                         <li>
                                             <h7>02/2012</h7> First MI, DES to LCX.</li>
+                                        <!-- STEMI on time line-->
                                         <li>
-                                            <h7>03/2012</h7> TTE, LVEF 15%, LVEDD 58 mm.</li>
+                                            <h7>03/2014</h7> TTE, LVEF 15%, LVEDD 58 mm.</li>
+                                        <!-- HFrEF on time line-->
                                         <li>
-                                            <h7>06/2012</h7> TTE, LVEF 30%, LVEDD 62 mm.</li>
+                                            <h7>06/2014</h7> TTE, LVEF 30%, LVEDD 62 mm.</li>
+                                        <!-- HFrEF on time line-->
                                         <li>
-                                            <h7>03/2013</h7> Abnormal stress test, referred for CABG.</li>
+                                            <h7>07/2014</h7> Abnormal stress test, referred for CABG. LIMA to LAD, reverse SVG to OM and RCA.</li>
+                                        <!-- HFrEF on time line-->
                                         <li>
                                             <h7>11/2016</h7> TTE, LVEF 10-20%, LVEDD 68 mm. Stress VO2.</li>
                                         <li>
@@ -200,20 +217,6 @@
                             <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">CKD Stage III</h3>
                         </div>
 
-                        <div class="pt-brief-item summary" style="margin-top:15px">
-                            Indication
-                            <div class="mdl-chip half-chip">
-                                <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">DT LVAD</h3>
-                            </div>
-                        </div>
-
-                        <div class="pt-brief-item summary">
-                            Projection
-                            <div class="mdl-chip half-chip">
-                                <h3 class="mdl-chip__text min-width expandCmbdt waves-effect waves-light btn">56% 1yr Survival</h3>
-                            </div>
-                        </div>
-
                         <div id="expandCmbdt" class="modal">
                             <div class="modal-content">
                                 <div class="pt-brief-bar">
@@ -221,12 +224,17 @@
                                 </div>
                                 <ul style="padding-left: 10px">
                                     <li><b>Diabetes mellitus type 2:</b> NIDDM, Dx 2001, mild peripheral neuropathy and CKD stage III;</li>
-                                    <li><b>History of Prosetic Cancer:</b> CABG 03/2013 - LIMA to LAD, SVG to OM and RCA;</li>
+                                    <li><b>History of Prostate Cancer:</b> Dx 2007 s/p local radiation and TURP;</li>
                                     <li><b>Ventricular Tachycardia:</b> ICD shocks for monomorphic VT 11/2016, started on Amiodarone;</li>
 
-                                    <li><b>CKD stage III:</b> Dx 2016, likely related to DM and cardio renal syndrome; eGFR 50</li>
+                                    <li><b>CKD stage III:</b> Dx 2016, likely related to DM and cardio renal syndrome; eGFR 42;</li>
 
-                                    <li><b>Pulmonary hypertension from left heart disease:</b> DX 7/2015: RA 12, PA 61/36 (47), W31 TTE 02/2017 – est. PASP 60 mm Hg.</li>
+                                    <li><b>Pulmonary hypertension from left heart disease:</b> DX 7/2015: RA 12, PA 73/34 (51), W33, FCI 1.7, TPG 18 TTE 02/2017 – est. PASP 60 mm Hg, TAPSE 14.</li>
+
+                                    <li>Iron deficeincy anemia, chronic blood loss Dx 2015 erosive gastritis.</li>
+
+
+
                                 </ul>
                             </div>
 
@@ -235,15 +243,62 @@
                         <div class="pt-brief-item summary">
                             Transplant
                             <div class="mdl-chip half-chip">
-                                <h3 class="mdl-chip__text min-width ">Ineligible</h3>
+                                <h3 class="mdl-chip__text min-width expandTx waves-effect waves-light btn">Ineligible</h3>
+                                <div id="expandTx" class="modal">
+                                    <div class="modal-content">
+                                        <div class="pt-brief-bar">
+                                            <p class="section-header">Transplant Eligibility</p>
+                                        </div>
+                                        <p><b>Ineligible:</b> 70 years, medical comorbidities.</p>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
 
 
                         <div class="pt-brief-item summary">
                             Psycho-social
                             <div class="mdl-chip half-chip">
-                                <h3 class="mdl-chip__text min-width">Approved</h3>
+                                <h3 class="mdl-chip__text min-width expandSocial waves-effect waves-light btn">Approved</h3>
+                                <div id="expandSocial" class="modal">
+                                    <div class="modal-content">
+                                        <div class="pt-brief-bar">
+                                            <p class="section-header">Psycho-social</p>
+                                        </div>
+                                        <p>Final assessment: Acceptable candidate for DT LVAD</p>
+                                        <p><b>Substance Abuse History: Clear</b></p>
+                                        <ul>
+                                            <li>ETOH: No history of abuse or dependence, 1-2 beers/week;</li>
+                                            <li>Drugs/substance abuse: No history of abuse or dependence;</li>
+                                            <li>Tobacco use: Smoked 1/2 to 1 pack for 30 years, quit in 1996;</li>
+                                            <li>Past detox or rehab: None.</li>
+                                        </ul>
+                                        <p><b>Family Support System: Adequate</b></p>
+                                        <ul>
+                                            <li>Are family members aware of your illness? Yes</li>
+                                            <li>Do you have friends or family members to help assist post-transplant? Yes - wife can take FMLA</li>
+                                        </ul>
+                                        <p><b>Social History</b></p>
+                                        <ul>
+                                            <li>Born and raised in Pittsburgh, PA</li>
+                                            <li>Developmental milestones: Normal</li>
+                                            <li>Highest Level of Education High school diplomia</li>
+                                            <li>Marital Status: married</li>
+                                            <li>Number of children: 2</li>
+                                            <li>Employment Status :full time</li>
+                                            <li>Housing: Stable</li>
+                                            <li>Support: spouse/partner, adult children and extended family</li>
+                                            <li>Military history: Yes</li>
+                                            <li>Current Psychosocial Stressors: Current Medical Problems and Financial stressors</li>
+                                            <li>Living situation/lives: with wife and children</li>
+                                            <li>Legal history: None</li>
+                                            <li>Access to firearms: None</li>
+                                            <li>Personal hx of physical, emotional, or sexual abuse: None</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -263,15 +318,22 @@
                                 </div>
                             </div>
                         </div>
+
+
+                        <div class="pt-brief-item summary">
+                            VAD Projection
+                            <div class="mdl-chip half-chip">
+                                <h3 class="mdl-chip__text min-width">65% 1yr Survival</h3>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
 
                 <div class="mdl-cell mdl-cell--9-col">
 
-
                     <div class="mdl-grid mdl-grid--no-spacing">
-                        <div class="mdl-card mdl-cell mdl-cell--9-col">
+                        <div class="mdl-cell mdl-cell--8-col">
 
                             <!-- Timeline Chart -->
                             <div class="mdl-card full-width">
@@ -279,22 +341,30 @@
                                     <p class="section-header ">HISTORY</p>
                                 </div>
 
-                                <div class="full-width squeeze " id="timeline-chart"></div>
+                                <div class="full-width squeeze" id="histroy-timeline"></div>
 
                                 <div class="projection-intervention">
-                                    <p class="time-line-legend"></p>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised" data-y_accessor="vad" data-y_upper="vad_upper" id="default-projection-intervention" data-y_lower="vad_lower ">VAD</button>
-
-                                    <button class="mdl-button mdl-js-button mdl-button--raised" data-y_accessor="med" data-y_upper="med_upper" data-y_lower="med_lower">Medication</button>
+                                    <!--
+                                    <span style="padding-right: 20px">Previous Cardiac Sx: 1</span>-->
+                                    <p><img src="img/dotted_line.png" alt="dotted line" width="40px"> events</p>
+                                    <p><a style="color:#9e9efc">&#x25FC</a> hospitalizations</p>
+                                    <p id="history-legend" class="timeline-legend"></p>
                                 </div>
                             </div>
 
                         </div>
 
-                        <div class="mdl-card mdl-cell mdl-cell--3-col">
+                        <div class="mdl-card mdl-cell mdl-cell--4-col">
                             <div class="mdl-card full-width">
                                 <div class="pt-brief-bar" style="margin-bottom:0">
                                     <p class="section-header ">PROJECTION</p>
+                                </div>
+
+                                <div class="full-width squeeze " id="projection-timeline"></div>
+
+                                <div class="projection-intervention">
+
+                                    <p id="projection-legend" class="timeline-legend"></p>
                                 </div>
                             </div>
                         </div>
@@ -309,6 +379,7 @@
                             <div class="mdl-card">
                                 <div class="pt-brief-bar">
                                     <p class="section-header ">LABS</p>
+                                    <div class="appended-detail">03/2017</div>
                                 </div>
 
                                 <div>
@@ -328,7 +399,11 @@
                                             </tr>
                                             <tr>
                                                 <td>CREAT</td>
-                                                <td>1.7</td>
+                                                <td>1.9</td>
+                                            </tr>
+                                            <tr>
+                                                <td>GFR</td>
+                                                <td>42</td>
                                             </tr>
                                             <tr>
                                                 <td>HGBA1C</td>
@@ -354,14 +429,12 @@
                                                 <td>NA</td>
                                                 <td>121</td>
                                             </tr>
+                                            <!-- 
                                             <tr>
                                                 <td></td>
                                                 <td>
-                                                    <!-- Modal Trigger -->
                                                     <h7 class="expandLabs waves-effect waves-light btn">more...</h7>
 
-
-                                                    <!-- Modal Structure -->
                                                     <div id="expandLabs" class="modal">
                                                         <div class="modal-content">
                                                             <div class="pt-brief-bar">
@@ -371,7 +444,7 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
@@ -380,83 +453,95 @@
                         </div>
 
                         <div class="mdl-card mdl-cell mdl-cell--3-col">
-                            <div class="pt-brief-bar">
-                                <div class="section-header">CARDCATH</div>
-                                <div class="appended-detail">02/2017</div>
-                            </div>
-                            <table class="data-table mdl-js-data-table">
-                                <tbody>
-                                    <tr class="first-row">
-                                        <td>RA</td>
-                                        <td>12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PAP</td>
-                                        <td>73/34(51)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PCWP</td>
-                                        <td>33</td>
-                                    </tr>
-                                    <tr>
-                                        <td>TPG</td>
-                                        <td>18</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SVR</td>
-                                        <td>1200</td>
-                                    </tr>
-                                    <tr>
-                                        <td>CI</td>
-                                        <td>2.18</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SVO2</td>
-                                        <td>42</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PVR</td>
-                                        <td>305</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Peak VO2</td>
-                                        <td>12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>RER</td>
-                                        <td>1.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6MWD</td>
-                                        <td>240m</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Last LHC</td>
-                                        <td>02/16/2017</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>
-                                            <!-- Modal Trigger -->
-                                            <h7 class="expandCardcath waves-effect waves-light btn">more...</h7>
+                            <div class="mdl-card">
+                                <div class="pt-brief-bar">
+                                    <div class="section-header">CARDCATH</div>
+                                    <div class="appended-detail">03/2017</div>
+                                </div>
+                                <table class="data-table mdl-js-data-table">
+                                    <tbody>
+                                        <tr class="first-row">
+                                            <td>RA</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PAP</td>
+                                            <td>73/34(51)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PCWP</td>
+                                            <td>33</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TPG</td>
+                                            <td>18</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SVR</td>
+                                            <td>1200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CI (Fick)</td>
+                                            <td>1.7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SVO2</td>
+                                            <td>42</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PVR</td>
+                                            <td>305</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LHC</td>
+                                            <td>
+                                                <!-- Modal Trigger -->
+                                                <h7 class="expandCardcath waves-effect waves-light btn">more...</h7>
 
 
-                                            <!-- Modal Structure -->
-                                            <div id="expandCardcath" class="modal">
-                                                <div class="modal-content">
-                                                    <div class="pt-brief-bar">
-                                                        <p class="section-header">CARDCATH</p>
+                                                <!-- Modal Structure -->
+                                                <div id="expandCardcath" class="modal">
+                                                    <div class="modal-content">
+                                                        <div class="pt-brief-bar">
+                                                            <p class="section-header">CARDCATH</p>
+                                                        </div>
+                                                        <p><b>Last LHC:</b></p>
+                                                        <p>
+                                                            <h7>02/2012</h7> Severe diffuse disease mid to distal LAD, LCX 90% occluded after OM1, RCA 99% occluded proximally.
+                                                            <br>
+                                                            <h7>06/2016</h7> LIMA to LAD patent, occluded SVG to OM and RCA. </p>
                                                     </div>
-                                                    <p><b>Last LHC:</b>
-                                                        <h7>02/2016</h7> LIMA to LAD patent, occluded SVD to OM and RCA, LM. Severe diffuse disease mid to distal LAD, LCX and RCA - severely disease (chronically occluded).</p>
                                                 </div>
-                                            </div>
 
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="mdl-card">
+                                <div class="pt-brief-bar">
+                                    <div class="section-header">FUNCTIONAL CAPACITY</div>
+                                </div>
+                                <table class="data-table mdl-js-data-table">
+                                    <tbody>
+                                        <tr class="first-row">
+                                            <td>Peak VO2</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>RER</td>
+                                            <td>1.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6MWD</td>
+                                            <td>240m</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+
 
                         <div class="mdl-card mdl-cell mdl-cell--3-col">
                             <div class="mdl-card">
@@ -485,14 +570,13 @@
                                             <td>Aldactone</td>
                                             <td>25 /day</td>
                                         </tr>
-
                                     </tbody>
                                 </table>
                             </div>
                             <div class="mdl-card">
                                 <div class="pt-brief-bar">
                                     <div class="section-header">ECHO</div>
-                                    <div class="appended-detail">02/2017</div>
+                                    <div class="appended-detail">03/2017</div>
                                 </div>
                                 <div>
                                     <table class="data-table squeeze mdl-js-data-table ">
@@ -559,10 +643,12 @@
                         </div>
 
                         <div class="mdl-card mdl-cell mdl-cell--3-col">
+
                             <div class="mdl-card">
+
                                 <div class="pt-brief-bar">
                                     <div class="section-header">PFT</div>
-                                    <div class="appended-detail ">02/2017</div>
+                                    <div class="appended-detail ">03/2017</div>
                                 </div>
                                 <table class="data-table mdl-js-data-table">
                                     <tbody>
@@ -604,7 +690,7 @@
                             <div class="mdl-card">
                                 <div class="pt-brief-bar">
                                     <div class="section-header">EKG</div>
-                                    <div class="appended-detail ">02/2017</div>
+                                    <div class="appended-detail ">03/2017</div>
                                 </div>
                                 <table class="data-table mdl-js-data-table">
                                     <tbody>
@@ -623,17 +709,61 @@
                                                 <!-- Modal Trigger -->
                                                 <h7 class="expandEKG waves-effect waves-light btn">more...</h7>
 
+
                                                 <!-- Modal Structure -->
                                                 <div id="expandEKG" class="modal">
                                                     <div class="modal-content">
                                                         <div class="pt-brief-bar">
                                                             <p class="section-header">EKG</p>
                                                         </div>
-                                                        <p></p>
+                                                        <ul>
+                                                            <li>Atrial fibrillation,</li>
+                                                            <li>Right superior axis deviation,</li>
+                                                            <li>Nonspecific intraventricular conduction delay,</li>
+                                                            <li>Nonspecific ST-T wave changes,</li>
+                                                            <li>
+                                                                Abnormal ECG when compared with ECG of
+                                                                <h7>19-OCT-2016 09:16</h7>, PVC's are no longer present.</li>
+                                                        </ul>
+                                                        <img src="img/p1_ecg.png" alt="Hospital A Patient 1 ECG" width="100%">
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
+
+
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="mdl-card">
+                                <div class="pt-brief-bar">
+                                    <div class="section-header">OTHERS</div>
+                                </div>
+                                <table class="data-table mdl-js-data-table">
+                                    <tbody>
+                                        <tr class="first-row">
+                                            <td>ABI</td>
+                                            <td>
+                                                <h7>...</h7>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>CT Scan</td>
+                                            <td>
+                                                <h7>...</h7>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>More</td>
+                                            <td>
+                                                <h7>...</h7>
+                                            </td>
+                                        </tr>
+
                                     </tbody>
                                 </table>
                             </div>
@@ -649,6 +779,10 @@
 
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js "></script>
+    <script src="https://d3js.org/d3-time.v1.min.js"></script>
+    <script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+
+    <!-- medical history timeline visualization -->
     <script>
         d3.json('data/bp.json', function(data) {
 
@@ -656,6 +790,7 @@
             for (var i = 0; i < data.length; i++) {
                 data[i] = MG.convert.date(data[i], 'date');
             }
+
 
             // add Singleton
             var data_singleton = [{
@@ -676,7 +811,7 @@
 
             // add milestones
             var clicker = function() {
-                window.open('https://www.google.com', '_blank');
+                window.open('#https://www.google.com', '_blank');
             };
 
             var markers = [{
@@ -688,16 +823,19 @@
             }, {
                 'date': new Date('2014-05-01T00:00:00.000Z'),
                 'label': "CABG",
-                'click': clicker
+                //'click': clicker
             }, {
                 'date': new Date('2015-06-01T00:00:00.000Z'),
-                'label': "NYHA ClassII"
+                'label': "NYHA Class II"
             }, {
                 'date': new Date('2016-11-01T00:00:00.000Z'),
-                'label': "NYHA ClassIII"
+                'label': "NYHA Class IIIb"
             }, {
                 'date': new Date('2017-02-01T00:00:00.000Z'),
-                'label': "Add Inotrope; Referred for MCS. "
+                'label': "Add Inotrope"
+            }, {
+                'date': new Date('2017-02-22T00:00:00.000Z'),
+                'label': "Referred for MCS"
             }];
 
             var hospitalizations = [{
@@ -728,29 +866,33 @@
                 class: 'mg-regions' //optional
             }]
 
-            // handling multiple intervention choices
-            var globals = {};
-            var default_chart = {
+            MG.data_graphic({
                 data: data,
                 animate_on_load: true,
                 top: 50,
-                left: 10,
-                right: 10,
+                left: 30,
+                right: 80,
                 full_width: true,
                 height: 200,
-                target: '#timeline-chart',
+                target: '#histroy-timeline',
 
-                x_rug: true,
+                area: false,
                 x_accessor: 'date',
                 show_secondary_x_label: true,
-                max_x: new Date('2019-03-01T00:00:00.000Z'),
+                max_x: new Date('2017-03-31T00:00:00.000Z'),
                 min_x: new Date('2013-05-01T00:00:00.000Z'),
                 x_extended_ticks: false,
+                xax_format: d3.timeFormat('%b'),
+                xax_count: 8,
                 y_accessor: 'value',
                 y_axis: true,
                 y_label: 'BP',
-                max_y: 170,
-                min_y: 70,
+                yax_count: 2,
+                y_rug: true,
+                //y_extended_ticks:true,
+                max_y: 120,
+                min_y: 80,
+
                 color: ['#000000', '#b0bec5'],
 
 
@@ -767,52 +909,75 @@
                     var temp = (date_diff >= 0) ? date_diff + ' days ago' : Math.abs(date_diff) + ' days later'
                     return temp
                 },
-
                 show_confidence_band: ['lower', 'upper'],
                 markers: markers,
                 regions: hospitalizations,
-                baselines: [{
-                    value: 90,
-                    label: 'BP90'
-                }],
 
-                legend: ['BP History', 'Prognostic Projection'],
-                legend_target: '.time-line-legend',
+                //baselines: [{value: 90,label: 'BP90'}],
 
-            };
-
-            // load data and draw chart
-            d3.json('data/bp.json', function(data) {
-                data = MG.convert.date(data, 'date');
-                globals.data = data;
-
-                default_chart.data = data;
-                MG.data_graphic(default_chart);
+                legend: ['BP', 'Prognostic Projection'],
+                legend_target: '#history-legend',
             });
 
-            // redraw upon button click
-            $('.projection-intervention button').click(function() {
-                var new_y_accessor = $(this).data('y_accessor');
-                var new_y_upper = $(this).data('y_upper');
-                var new_y_lower = $(this).data('y_lower');
-                console.log(new_y_accessor);
-                console.log(hospitalizations);
 
-                default_chart.y_accessor = ['value', new_y_accessor];
-                default_chart.show_confidence_band = [new_y_upper, new_y_lower];
-
-                default_chart.regions = hospitalizations;
-                // change button state
-                $(this).addClass('active mdl-button--colored').siblings().removeClass('active mdl-button--colored');
-
-                // update data
-                delete default_chart.xax_format;
-                MG.data_graphic(default_chart);
-            });
 
         });
 
     </script>
+
+    <!-- prediction timeline visualization -->
+    <script>
+        d3.json('data/bp.json', function(data) {
+
+            // handling multiple lines
+            for (var i = 0; i < data.length; i++) {
+                data[i] = MG.convert.date(data[i], 'date');
+            }
+
+            var markers = [{
+                'date': new Date('2017-04-14T00:00:00.000Z'),
+                'label': "RV Failure (in 21 days)"
+            }, {
+                'date': new Date('2017-05-28T00:00:00.000Z'),
+                'label': "Renal Failure (in 66 days)"
+            }];
+
+
+            MG.data_graphic({
+                data: data,
+                target: '#projection-timeline',
+
+                animate_on_load: true,
+                top: 50,
+                full_width: true,
+                height: 200,
+
+                show_secondary_x_label: true,
+                min_x: new Date('2017-03-22T00:00:00.000Z'),
+                max_x: new Date('2020-03-31T00:00:00.000Z'),
+                x_extended_ticks: false,
+                y_label: "survival",
+                y_accessor: ['vad', 'med'],
+                max_y: 1,
+                min_y: 0,
+                format: 'percentage',
+                color: ['#000000', '#b0bec5'],
+
+                show_confidence_band: ['vad_lower', 'vad_upper'],
+
+                //regions: hospitalizations,
+
+                //baselines: [{value: 90,label: 'BP90'}],
+                markers: markers,
+
+                legend: ['LVAD', 'med only'],
+                legend_target: '#projection-legend',
+
+            });
+        });
+
+    </script>
+
 
     <script>
         // load vad timeline chart on load
@@ -837,6 +1002,21 @@
                 $(this).simplePopup({
                     type: "html",
                     htmlSelector: "#expandCmbdt"
+                });
+            });
+
+            $("h3.expandSocial").on("click", function(e) {
+                e.preventDefault();
+                $(this).simplePopup({
+                    type: "html",
+                    htmlSelector: "#expandSocial"
+                });
+            });
+            $("h3.expandTx").on("click", function(e) {
+                e.preventDefault();
+                $(this).simplePopup({
+                    type: "html",
+                    htmlSelector: "#expandTx"
                 });
             });
 

@@ -66,15 +66,43 @@ function mg_place_marker_lines(gm, args) {
         .attr('stroke-dasharray', '3,1');
 }
 
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+        console.log(tspan.node().getComputedTextLength());
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+}
+
+
 function mg_place_marker_text(gm, args) {
     gm.selectAll('.mg-markers')
         .data(args.markers.filter(mg_in_range(args)))
         .enter()
         .append('text')
+      
         .attr('class', function (d) {
             return d.textclass || '';
         })
         .classed('mg-marker-text', true)
+        //.call(mg_return_label, 30)
         .attr('x', mg_x_position(args))
         .attr('y', args.x_axis_position === 'bottom' ? mg_get_top(args) * 0.95 : mg_get_bottom(args) + args.buffer)
         .attr('text-anchor', 'left')
