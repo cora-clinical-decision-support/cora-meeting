@@ -901,7 +901,7 @@
                     var today = new Date('2017-03-01T00:00:00.000Z')
                     Object.keys(d).forEach(
                         function(key) {
-                            this_date = d["key"]
+                            this_date = d["date"]
                         }
                     )
 
@@ -909,6 +909,7 @@
                     var temp = (date_diff >= 0) ? date_diff + ' days ago' : Math.abs(date_diff) + ' days later'
                     return temp
                 },
+                
                 show_confidence_band: ['lower', 'upper'],
                 markers: markers,
                 regions: hospitalizations,
